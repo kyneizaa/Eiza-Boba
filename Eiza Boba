@@ -1,0 +1,107 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package projecteiza;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moklet1
+ */
+public class ProjectEiza {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("CIBOBA");
+        System.out.println("");
+        
+        Scanner input=new Scanner (System.in);
+        String drink,icecream;
+        int hargadrink=0,hargaic=0;
+        int total,uang,kembalian;
+        
+        System.out.println("CIBOBA DRINK");
+        System.out.println("1. Brown Sugar Boba Fresh Milk");
+        System.out.println("2. Brown Sugar Boba Milk Tea");
+        System.out.println("3. Salted Caramel Boba Fresh Milk");
+        System.out.println("");
+        
+        System.out.println("CIBOBA ICE CREAM");
+        System.out.println("1. Sundae Cup");
+        System.out.println("2. Brown Sugar Boba Sundae");
+        System.out.println("3. Signature Matcha Boba Sundae");
+        System.out.println("4. Signature Biscoff Boba Sundae");
+        System.out.println("");
+        
+        System.out.print("Masukkan CIBOBA Drink pesanan anda: ");
+        drink=input.next();
+        
+        switch (drink) {
+            case "1" :
+                hargadrink=23000;
+                System.out.println("Brown Sugar Boba Fresh Milk = 23000");
+                break;
+            case "2" :
+                hargadrink=23000;
+                System.out.println("Brown Sugar Boba Milk Tea = 23000");
+                break;
+            case "3" :
+                hargadrink=28000;
+                System.out.println("Salted Caramel Boba Fresh Milk = 28000");
+                break;
+            default : System.out.println("Menu tidak tersedia.");
+                
+        }
+        
+        System.out.print("Masukkan CIBOBA Ice Cream pesanan anda: ");
+        icecream=input.next();
+        
+        switch (icecream) {
+            case "1" :
+                hargaic=10000;
+                System.out.println("Sundae Cup = 10000");
+                break;
+            case "2" :
+                hargaic=13000;
+                System.out.println("Brown Sugar Boba Sundae = 13000");
+                break;
+            case "3" :
+                hargaic=13000;
+                System.out.println("Signature Matcha Boba Sundae = 13000");
+                break;
+            case "4" :
+                hargaic=18000;
+                System.out.println("Signature Biscoff Boba Sundae = 18000");
+                break;
+            default : System.out.println("Menu tidak tersedia.");
+                
+        }
+        
+        
+        System.out.println("");
+        total=hargadrink+hargaic;
+        System.out.println("Total harga pembelian: "+total);
+        System.out.println("");
+        
+        System.out.println("Masukkan jumlah uang pembayaran: ");
+        uang=input.nextInt();
+        System.out.println("");
+        
+        if (uang==total) {
+            System.out.println("Terimakasih, anda telah membayar dengan uang pas.");
+        } else if (uang>total) {
+            kembalian=uang-total;
+            System.out.println("Jumlah uang kembalian: "+kembalian);
+        } else {
+            System.out.println("Maaf, uang anda kurang.");
+        }
+        
+        
+    }
+    
+}
